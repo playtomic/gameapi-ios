@@ -61,13 +61,23 @@
             STAssertTrue(r2.success, [NSString stringWithFormat:@"[%@]#2 Request succeded", section]);
             STAssertTrue(r2.errorcode == 209, [NSString stringWithFormat:@"[%@]#2 Rejected duplicate score", section]);
             
-            score.allowduplicates = true;
+            // better score gets accepted
+            score.points = 11000;
             
-            [[Playtomic Leaderboards] save:score andHandler:^(PResponse* r3) {
-                STAssertTrue(r3.success, [NSString stringWithFormat:@"[%@]#3 Request succeded", section]);
-                STAssertTrue(r3.errorcode == 0, [NSString stringWithFormat:@"[%@]#3 No errorcode", section]);
-                 done = YES;
-             }];
+            [[Playtomic Leaderboards] save:score andHandler:^(PResponse* r) {
+                STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#1 Request succeded", section]);
+                STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@]#1 No errorcode", section]);
+                
+                // score gets allopwed
+                score.allowduplicates = true;
+                score.points = 9000;
+                
+                [[Playtomic Leaderboards] save:score andHandler:^(PResponse* r3) {
+                    STAssertTrue(r3.success, [NSString stringWithFormat:@"[%@]#3 Request succeded", section]);
+                    STAssertTrue(r3.errorcode == 0, [NSString stringWithFormat:@"[%@]#3 No errorcode", section]);
+                     done = YES;
+                 }];
+            }];
         }];
     }];
             

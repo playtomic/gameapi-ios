@@ -6,9 +6,13 @@
     
 }
 
-- (void) list:(NSMutableDictionary*)options andHandler:(void(^)(NSArray *scores, int numscores, PResponse *response))handler;
-- (void) save:(PlayerScore*)score andHandler:(void(^)(PResponse *response))handler;
-- (void) saveAndList:(PlayerScore*)score  andOptions:(NSDictionary*)options andHandler:(void(^)(NSArray *scores, int numscores, PResponse *response))handler;
+- (void) list:(NSMutableDictionary*)options
+   andHandler:(void(^)(NSArray *scores, int numscores, PResponse *response))handler;
+- (void) save:(PlayerScore*)score
+   andHandler:(void(^)(PResponse *response))handler;
+- (void) saveAndList:(PlayerScore*)score
+          andOptions:(NSDictionary*)options
+          andHandler:(void(^)(NSArray *scores, int numscores, PResponse *response))handler;
 
 @end
 
