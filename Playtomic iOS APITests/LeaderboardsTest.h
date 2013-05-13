@@ -18,4 +18,6 @@
 - (void) test2HighScores;
 - (void) test3LowScores;
 - (void) test4AllScores;
+- (void) test5FriendsScores;
+- (void) test6OwnScores;
 @end
