@@ -50,14 +50,14 @@
     level.fields = fields;
     
     [[Playtomic PlayerLevels] save:level andHandler:^(PlayerLevel *l, PResponse *r) {
-        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#2 Request succeded", section]);
+        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#2 Request succeeded", section]);
         STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@]#2 No errorcode", section]);
         STAssertTrue(l != Nil, [NSString stringWithFormat:@"[%@]#2 Level is not null", section]);
         STAssertTrue(l.levelid != Nil, [NSString stringWithFormat:@"[%@]#2 Level has levelid", section]);
         STAssertTrue([l.name isEqualToString:level.name], [NSString stringWithFormat:@"[%@] Level names match", section]);
         
         [[Playtomic PlayerLevels] save:level andHandler:^(PlayerLevel *l2, PResponse *r2) {
-            STAssertTrue(r2.success, [NSString stringWithFormat:@"[%@]#2 Request succeded", section]);
+            STAssertTrue(r2.success, [NSString stringWithFormat:@"[%@]#2 Request succeeded", section]);
             STAssertTrue(r2.errorcode == 405, [NSString stringWithFormat:@"[%@]#2 Duplicate level errorcode", section]);
             done = YES;
         }];
@@ -85,14 +85,14 @@
     level.fields = fields;
     
     [[Playtomic PlayerLevels] save:level andHandler:^(PlayerLevel *l, PResponse *r) {
-        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#1 Request succeded", section]);
+        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#1 Request succeeded", section]);
         STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@]#1 No errorcode", section]);
         STAssertTrue(l != Nil, [NSString stringWithFormat:@"[%@]#1 Level is not null", section]);
         STAssertTrue(l.levelid != Nil, [NSString stringWithFormat:@"[%@]#1 Level has levelid", section]);
         STAssertTrue([l.name isEqualToString:level.name], [NSString stringWithFormat:@"[%@]#1 Level names match", section]);
         
         [[Playtomic PlayerLevels] load:l.levelid andHandler:^(PlayerLevel *l2, PResponse *r2) {
-            STAssertTrue(r2.success, [NSString stringWithFormat:@"[%@]#2 Request succeded", section]);
+            STAssertTrue(r2.success, [NSString stringWithFormat:@"[%@]#2 Request succeeded", section]);
             STAssertTrue(r2.errorcode == 0, [NSString stringWithFormat:@"[%@]#2 No errorcode", section]);
             STAssertTrue([l.name isEqualToString:l2.name], [NSString stringWithFormat:@"[%@]#2 Level name is correct", section]);
             STAssertTrue([l.data isEqualToString:l2.data], [NSString stringWithFormat:@"[%@]#2 Level data is correct", section]);
@@ -121,7 +121,7 @@
     [list setObject:filters forKey:@"filters"];
         
     [[Playtomic PlayerLevels] list:list andHandler:^(NSArray *levels, int numlevels, PResponse *r) {
-        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#1 Request succeded", section]);
+        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#1 Request succeeded", section]);
         STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@]#1 No errorcode", section]);
         STAssertTrue([levels count] > 0, [NSString stringWithFormat:@"[%@]#1 Received levels", section]);
         STAssertTrue(numlevels > 0, [NSString stringWithFormat:@"[%@]#1 Received numlevels", section]);
@@ -136,7 +136,7 @@
         [list setObject:[NSNumber numberWithBool:YES] forKey:@"data"];
         
         [[Playtomic PlayerLevels] list:list andHandler:^(NSArray *levels2, int numlevels2, PResponse *r2) {
-            STAssertTrue(r2.success, [NSString stringWithFormat:@"[%@]#2 Request succeded", section]);
+            STAssertTrue(r2.success, [NSString stringWithFormat:@"[%@]#2 Request succeeded", section]);
             STAssertTrue(r2.errorcode == 0, [NSString stringWithFormat:@"[%@]#2 No errorcode", section]);
             STAssertTrue([levels2 count] > 0, [NSString stringWithFormat:@"[%@]#2 Received levels", section]);
             STAssertTrue(numlevels2 > 0, [NSString stringWithFormat:@"[%@]#2 Received numlevels", section]);
@@ -174,7 +174,7 @@
     level.fields = fields;
     
     [[Playtomic PlayerLevels] save:level andHandler:^(PlayerLevel *l, PResponse *r) {
-        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#1 Request succeded", section]);
+        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#1 Request succeeded", section]);
         STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@]#1 No errorcode", section]);
         STAssertTrue(l != Nil, [NSString stringWithFormat:@"[%@]#1 Level is not null", section]);
         STAssertTrue(l.levelid != Nil, [NSString stringWithFormat:@"[%@]#1 Level has levelid", section]);

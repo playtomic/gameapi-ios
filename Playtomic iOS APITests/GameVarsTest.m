@@ -18,7 +18,7 @@
     __block BOOL done = NO;
 
     [[Playtomic GameVars] load:^(NSDictionary* gamevars, PResponse* r){
-        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@] Request succeded", section]);
+        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@] Request succeeded", section]);
         STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@] No errorcode", section]);
         STAssertTrue([gamevars objectForKey:@"testvar1"] != Nil, [NSString stringWithFormat:@"[%@] Has known testvar1", section]);
         STAssertTrue([gamevars objectForKey:@"testvar2"] != Nil, [NSString stringWithFormat:@"[%@] Has known testvar2", section]);
@@ -47,7 +47,7 @@
     __block int done=0;
 
     [[Playtomic GameVars] loadWithName:@"testvar1" andHandler:^(NSDictionary* gamevars, PResponse* r){
-        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@] Request succeded", section]);
+        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@] Request succeeded", section]);
         STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@] No errorcode", section]);
         STAssertTrue([gamevars objectForKey:@"testvar1"] != Nil, [NSString stringWithFormat:@"[%@] Has known testvar1", section]);
         STAssertTrue([gamevars objectForKey:@"testvar2"] == Nil, [NSString stringWithFormat:@"[%@] Does not have testvar2", section]);

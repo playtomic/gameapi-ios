@@ -17,7 +17,7 @@
     __block BOOL done = NO;
     
     [[Playtomic GeoIP] lookup:^(PlayerCountry* country, PResponse* r){
-        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@] Request succeded", section]);
+        STAssertTrue(r.success, [NSString stringWithFormat:@"[%@] Request succeeded", section]);
         STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@] No errorcode", section]);
         STAssertTrue(country.name != Nil, [NSString stringWithFormat:@"[%@] Has country name", section]);
         STAssertTrue(country.code != Nil, [NSString stringWithFormat:@"[%@] Has country code", section]);
