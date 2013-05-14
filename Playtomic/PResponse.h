@@ -9,5 +9,6 @@
 - (id)initWithSuccess:(int)success
          andErrorCode:(NSInteger)errorcode;
 
+- (NSString*) errorMessage;
 
 @end
