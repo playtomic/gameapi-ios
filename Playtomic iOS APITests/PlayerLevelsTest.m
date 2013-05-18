@@ -1,11 +1,3 @@
-//
-//  PlayerLevelsTest.m
-//  Playtomic iOS API
-//
-//  Created by Ben Lowry on 5/2/13.
-//  Copyright (c) 2013 Ben Lowry. All rights reserved.
-//
-
 #import "PlayerLevelsTest.h"
 #import "Playtomic.h"
 #import "PlayerLevel.h"
