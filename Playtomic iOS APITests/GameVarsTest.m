@@ -36,7 +36,7 @@
 - (void) testSingle
 {
     NSString *section = @"gamevars.single";
-    __block int done=0;
+    __block BOOL done = NO;
 
     [[Playtomic GameVars] loadWithName:@"testvar1" andHandler:^(NSDictionary* gamevars, PResponse* r){
         STAssertTrue(r.success, [NSString stringWithFormat:@"[%@] Request succeeded", section]);
@@ -46,7 +46,7 @@
         STAssertTrue([gamevars objectForKey:@"testvar3"] == Nil, [NSString stringWithFormat:@"[%@] Does not have testvar3", section]);
         NSString *value1 = [gamevars objectForKey:@"testvar1"];
         STAssertTrue([value1 isEqual:@"testvalue1"], [NSString stringWithFormat:@"[%@] Has known testvar1 value", section]);
-        done = 1;
+        done = YES;
     }];
     
     while (!done) {
