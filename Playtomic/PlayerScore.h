@@ -1,8 +1,7 @@
 #import <Foundation/Foundation.h>
 
-
 @interface PlayerScore : NSObject 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *playername;
 @property (nonatomic, strong) NSString *playerid;
 @property (nonatomic, strong) NSString *source;
 @property (nonatomic) int64_t points;

@@ -1,11 +1,3 @@
-//
-//  LeaderboardsTest.m
-//  Playtomic iOS API
-//
-//  Created by Ben Lowry on 5/1/13.
-//  Copyright (c) 2013 Ben Lowry. All rights reserved.
-//
-
 #import "LeaderboardsTest.h"
 #import "Playtomic.h"
 #import "PResponse.h"
@@ -44,7 +36,7 @@
     [fields setObject:[NSNumber numberWithInt:rnd] forKey:@"rnd"];
     
     PlayerScore *score = [[PlayerScore alloc] init];
-    score.name = @"person1";
+    score.playername = @"person1";
     score.points = 10000;
     score.fields = fields;
     score.table = [NSString stringWithFormat:@"scores%d", rnd];
@@ -68,9 +60,9 @@
             
             [NSThread sleepForTimeInterval:1];
             
-            [[Playtomic Leaderboards] save:score andHandler:^(PResponse* r) {
-                STAssertTrue(r.success, [NSString stringWithFormat:@"[%@]#1 Request succeeded", section]);
-                STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@]#1 No errorcode", section]);
+            [[Playtomic Leaderboards] save:score andHandler:^(PResponse* r3) {
+                STAssertTrue(r3.success, [NSString stringWithFormat:@"[%@]#3 Request succeeded", section]);
+                STAssertTrue(r3.errorcode == 0, [NSString stringWithFormat:@"[%@]#3 No errorcode", section]);
                 
                 // score gets allowed
                 score.allowduplicates = true;
@@ -78,9 +70,9 @@
                 
                 [NSThread sleepForTimeInterval:1];
                 
-                [[Playtomic Leaderboards] save:score andHandler:^(PResponse* r3) {
-                    STAssertTrue(r3.success, [NSString stringWithFormat:@"[%@]#3 Request succeeded", section]);
-                    STAssertTrue(r3.errorcode == 0, [NSString stringWithFormat:@"[%@]#3 No errorcode", section]);
+                [[Playtomic Leaderboards] save:score andHandler:^(PResponse* r4) {
+                    STAssertTrue(r4.success, [NSString stringWithFormat:@"[%@]#4 Request succeeded", section]);
+                    STAssertTrue(r4.errorcode == 0, [NSString stringWithFormat:@"[%@]#4 No errorcode", section]);
                      done = YES;
                  }];
             }];
@@ -102,7 +94,7 @@
     [fields setObject:[NSNumber numberWithInt:rnd] forKey:@"rnd"];
     
     PlayerScore *score = [[PlayerScore alloc] init];
-    score.name = @"person2";
+    score.playername = @"person2";
     score.points = 20000;
     score.fields = fields;
     score.table = [NSString stringWithFormat:@"scores%d", rnd];
@@ -239,7 +231,7 @@
     for(int i=0; i<10; i++)
     {
         PlayerScore *score = [[PlayerScore alloc] init];
-        score.name = [NSString stringWithFormat: @"person%d", i];
+        score.playername = [NSString stringWithFormat: @"person%d", i];
         score.points = i * 1000;
         score.fields = fields;
         score.table = [NSString stringWithFormat:@"friends%d", rnd];
@@ -309,7 +301,7 @@
         points += 1000;
         
         PlayerScore *score = [[PlayerScore alloc] init];
-        score.name = @"test account";
+        score.playername = @"test account";
         score.points = points;
         score.fields = fields;
         score.table = [NSString stringWithFormat:@"personal%d", rnd];
@@ -333,7 +325,7 @@
     __block BOOL done = NO;
     
     PlayerScore *finalscore = [[PlayerScore alloc] init];
-    finalscore.name = @"test account";
+    finalscore.playername = @"test account";
     finalscore.points = 3000;
     finalscore.fields = fields;
     finalscore.table = [NSString stringWithFormat:@"personal%d", rnd];

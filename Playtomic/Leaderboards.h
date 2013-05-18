@@ -6,7 +6,7 @@
     
 }
 
-- (void) list:(NSMutableDictionary*)options
+- (void) list:(NSDictionary*)options
    andHandler:(void(^)(NSArray *scores, int numscores, PResponse *response))handler;
 - (void) save:(PlayerScore*)score
    andHandler:(void(^)(PResponse *response))handler;

@@ -1,7 +1,7 @@
 #import "PlayerScore.h"
 
 @implementation PlayerScore
-@synthesize name;
+@synthesize playername;
 @synthesize playerid;
 @synthesize source;
 @synthesize points;
@@ -15,9 +15,9 @@
 
 - (id)initWithDictionary:(NSDictionary*)score
 {
-    if([score objectForKey:@"name"] != nil)
+    if([score objectForKey:@"playername"] != nil)
     {
-        self.name = [score objectForKey:@"name"];
+        self.playername = [score objectForKey:@"playername"];
     }
     
     if([score objectForKey: @"playerid"] != nil)

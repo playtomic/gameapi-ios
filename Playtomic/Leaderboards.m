@@ -15,7 +15,7 @@ NSString *const LEADERBOARDS_SAVEANDLIST = @"saveandlist";
 
 @implementation Leaderboards
 
-- (void) list:(NSMutableDictionary*)options andHandler:(void(^)(NSArray *scores, int numscores, PResponse *response))handler
+- (void) list:(NSDictionary*)options andHandler:(void(^)(NSArray *scores, int numscores, PResponse *response))handler
 {
     [PRequest requestWithSection:LEADERBOARDS_SECTION
                        andAction:LEADERBOARDS_LIST
@@ -54,9 +54,9 @@ NSString *const LEADERBOARDS_SAVEANDLIST = @"saveandlist";
 {
     NSMutableDictionary *postdata = [[NSMutableDictionary alloc] init];
     
-    if(score.name != nil)
+    if(score.playername != nil)
     {
-        [postdata setObject:score.name forKey:@"name"];
+        [postdata setObject:score.playername forKey:@"playername"];
     }
     
     if(score.playerid != nil)
@@ -106,9 +106,9 @@ NSString *const LEADERBOARDS_SAVEANDLIST = @"saveandlist";
 {
     NSMutableDictionary *postdata = [[NSMutableDictionary alloc] initWithDictionary:options];
 
-    if(score.name != nil)
+    if(score.playername != nil)
     {
-        [postdata setObject:score.name forKey:@"name"];
+        [postdata setObject:score.playername forKey:@"playername"];
     }
     
     if(score.playerid != nil)
