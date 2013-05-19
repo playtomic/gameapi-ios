@@ -13,6 +13,10 @@
 		7801C4C517320308002EEB33 /* GeoIPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7801C4C417320308002EEB33 /* GeoIPTest.m */; };
 		7801C4C8173208E1002EEB33 /* LeaderboardsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7801C4C7173208E1002EEB33 /* LeaderboardsTest.m */; };
 		7801C4CB1732C0EE002EEB33 /* PlayerLevelsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7801C4CA1732C0EE002EEB33 /* PlayerLevelsTest.m */; };
+		78264D591747EC2E009003B1 /* PlayerAchievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 78264D581747EC2E009003B1 /* PlayerAchievement.m */; };
+		78264D5C1747EC37009003B1 /* PlayerAward.m in Sources */ = {isa = PBXBuildFile; fileRef = 78264D5B1747EC37009003B1 /* PlayerAward.m */; };
+		78264D5F1747F037009003B1 /* Achievements.m in Sources */ = {isa = PBXBuildFile; fileRef = 78264D5E1747F037009003B1 /* Achievements.m */; };
+		78264D621747F8B0009003B1 /* AchievementsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 78264D611747F8B0009003B1 /* AchievementsTest.m */; };
 		789D05B117306E1900B87CB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789D05B017306E1900B87CB5 /* UIKit.framework */; };
 		789D05B317306E1900B87CB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789D05B217306E1900B87CB5 /* Foundation.framework */; };
 		789D05B517306E1900B87CB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789D05B417306E1900B87CB5 /* CoreGraphics.framework */; };
@@ -74,6 +78,14 @@
 		7801C4C7173208E1002EEB33 /* LeaderboardsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardsTest.m; sourceTree = "<group>"; };
 		7801C4C91732C0EE002EEB33 /* PlayerLevelsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerLevelsTest.h; sourceTree = "<group>"; };
 		7801C4CA1732C0EE002EEB33 /* PlayerLevelsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerLevelsTest.m; sourceTree = "<group>"; };
+		78264D571747EC2E009003B1 /* PlayerAchievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAchievement.h; sourceTree = "<group>"; };
+		78264D581747EC2E009003B1 /* PlayerAchievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAchievement.m; sourceTree = "<group>"; };
+		78264D5A1747EC37009003B1 /* PlayerAward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAward.h; sourceTree = "<group>"; };
+		78264D5B1747EC37009003B1 /* PlayerAward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAward.m; sourceTree = "<group>"; };
+		78264D5D1747F037009003B1 /* Achievements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievements.h; sourceTree = "<group>"; };
+		78264D5E1747F037009003B1 /* Achievements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Achievements.m; sourceTree = "<group>"; };
+		78264D601747F8B0009003B1 /* AchievementsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsTest.h; sourceTree = "<group>"; };
+		78264D611747F8B0009003B1 /* AchievementsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsTest.m; sourceTree = "<group>"; };
 		789D05AD17306E1900B87CB5 /* Playtomic iOS API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playtomic iOS API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		789D05B017306E1900B87CB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		789D05B217306E1900B87CB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -236,6 +248,8 @@
 				7801C4C7173208E1002EEB33 /* LeaderboardsTest.m */,
 				7801C4C91732C0EE002EEB33 /* PlayerLevelsTest.h */,
 				7801C4CA1732C0EE002EEB33 /* PlayerLevelsTest.m */,
+				78264D601747F8B0009003B1 /* AchievementsTest.h */,
+				78264D611747F8B0009003B1 /* AchievementsTest.m */,
 			);
 			path = "Playtomic iOS APITests";
 			sourceTree = "<group>";
@@ -300,6 +314,12 @@
 				78BEC3E617306EA2002AF518 /* PResponse.m */,
 				78A3F7861730D7B400740289 /* PlayerCountry.h */,
 				78A3F7871730D7B400740289 /* PlayerCountry.m */,
+				78264D571747EC2E009003B1 /* PlayerAchievement.h */,
+				78264D581747EC2E009003B1 /* PlayerAchievement.m */,
+				78264D5A1747EC37009003B1 /* PlayerAward.h */,
+				78264D5B1747EC37009003B1 /* PlayerAward.m */,
+				78264D5D1747F037009003B1 /* Achievements.h */,
+				78264D5E1747F037009003B1 /* Achievements.m */,
 			);
 			path = Playtomic;
 			sourceTree = "<group>";
@@ -439,6 +459,9 @@
 				78A3F78E1731616A00740289 /* PlayerLevels.m in Sources */,
 				7801C4B717318D12002EEB33 /* Leaderboards.m in Sources */,
 				7801C4B817318D12002EEB33 /* PlayerScore.m in Sources */,
+				78264D591747EC2E009003B1 /* PlayerAchievement.m in Sources */,
+				78264D5C1747EC37009003B1 /* PlayerAward.m in Sources */,
+				78264D5F1747F037009003B1 /* Achievements.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +473,7 @@
 				7801C4C517320308002EEB33 /* GeoIPTest.m in Sources */,
 				7801C4C8173208E1002EEB33 /* LeaderboardsTest.m in Sources */,
 				7801C4CB1732C0EE002EEB33 /* PlayerLevelsTest.m in Sources */,
+				78264D621747F8B0009003B1 /* AchievementsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
