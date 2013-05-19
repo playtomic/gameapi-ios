@@ -8,8 +8,6 @@
 @property (nonatomic, strong) NSString *playername;
 @property (nonatomic, strong) NSString *playerid;
 @property (nonatomic, strong) NSString *source;
-@property (nonatomic, strong) NSDate *date;
-@property (nonatomic, strong) NSString *rdate;
 @property (nonatomic, strong) NSDictionary *fields;
 @property (nonatomic, strong) PlayerAward *player;
 @property (nonatomic, strong) NSArray *friends;

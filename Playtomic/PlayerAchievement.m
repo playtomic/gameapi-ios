@@ -7,8 +7,6 @@
 @synthesize playername;
 @synthesize playerid;
 @synthesize source;
-@synthesize date;
-@synthesize rdate;
 @synthesize fields;
 @synthesize player;
 @synthesize friends;
@@ -35,16 +33,6 @@
     if([ach objectForKey: @"source"] != nil)
     {
         self.source = [ach objectForKey:@"source"];
-    }
-        
-    if([ach objectForKey: @"date"] != nil)
-    {
-        self.date = [ach objectForKey:@"date"];
-    }
-    
-    if([ach objectForKey: @"rdate"] != nil)
-    {
-        self.rdate = [ach objectForKey:@"rdate"];
     }
     
     if([ach objectForKey: @"fields"] != nil)
