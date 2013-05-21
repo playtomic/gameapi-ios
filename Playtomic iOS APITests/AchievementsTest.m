@@ -401,24 +401,27 @@
         STAssertTrue(r.errorcode == 0, [NSString stringWithFormat:@"[%@]#1 No errorcode", section]);
         [NSThread sleepForTimeInterval:2];
         
+        // rejected 
         [[Playtomic Achievements] save:achievement andHandler:^(PResponse* r2) {
             STAssertTrue(r2.success == false, [NSString stringWithFormat:@"[%@]#2 Request failed", section]);
-            STAssertTrue(r2.errorcode == 506, [NSString stringWithFormat:@"[%@]#2 Already had errorcode", section]);
+            STAssertTrue(r2.errorcode == 505, [NSString stringWithFormat:@"[%@]#2 Already had errorcode", section]);
             [NSThread sleepForTimeInterval:2];
             
             achievement.overwrite = true;
             
+            // allowed with overwrite
             [[Playtomic Achievements] save:achievement andHandler:^(PResponse* r3) {
                 STAssertTrue(r3.success, [NSString stringWithFormat:@"[%@]#3 Request succeeded", section]);
-                STAssertTrue(r3.errorcode == 505, [NSString stringWithFormat:@"[%@]#3 Already had achievement errorcode", section]);
+                STAssertTrue(r3.errorcode == 506, [NSString stringWithFormat:@"[%@]#3 Already had achievement errorcode", section]);
                 [NSThread sleepForTimeInterval:2];
                 
                 achievement.allowduplicates = true;
                 achievement.overwrite = false;
                 
+                // allowed with duplicate
                 [[Playtomic Achievements] save:achievement andHandler:^(PResponse* r4) {
                     STAssertTrue(r4.success, [NSString stringWithFormat:@"[%@]#4 Request succeeded", section]);
-                    STAssertTrue(r4.errorcode == 505, [NSString stringWithFormat:@"[%@]#4 No errorcode", section]);
+                    STAssertTrue(r4.errorcode == 506, [NSString stringWithFormat:@"[%@]#4 No errorcode", section]);
                     done = YES;
                 }];
             }];
