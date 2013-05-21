@@ -53,6 +53,8 @@
 		78BEC3E917306EA2002AF518 /* Playtomic.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BEC3E217306EA2002AF518 /* Playtomic.m */; };
 		78BEC3EA17306EA2002AF518 /* PRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BEC3E417306EA2002AF518 /* PRequest.m */; };
 		78BEC3EB17306EA2002AF518 /* PResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BEC3E617306EA2002AF518 /* PResponse.m */; };
+		78FECE74174C0D6200D6162F /* Newsletter.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FECE73174C0D6200D6162F /* Newsletter.m */; };
+		78FECE77174C0E7600D6162F /* NewsletterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FECE76174C0E7600D6162F /* NewsletterTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +79,7 @@
 		7801C4C6173208E1002EEB33 /* LeaderboardsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardsTest.h; sourceTree = "<group>"; };
 		7801C4C7173208E1002EEB33 /* LeaderboardsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardsTest.m; sourceTree = "<group>"; };
 		7801C4C91732C0EE002EEB33 /* PlayerLevelsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerLevelsTest.h; sourceTree = "<group>"; };
-		7801C4CA1732C0EE002EEB33 /* PlayerLevelsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerLevelsTest.m; sourceTree = "<group>"; };
+		7801C4CA1732C0EE002EEB33 /* PlayerLevelsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerLevelsTest.m; path = "Playtomic iOS APITests/PlayerLevelsTest.m"; sourceTree = SOURCE_ROOT; };
 		78264D571747EC2E009003B1 /* PlayerAchievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAchievement.h; sourceTree = "<group>"; };
 		78264D581747EC2E009003B1 /* PlayerAchievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAchievement.m; sourceTree = "<group>"; };
 		78264D5A1747EC37009003B1 /* PlayerAward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAward.h; sourceTree = "<group>"; };
@@ -146,6 +148,10 @@
 		78BEC3E417306EA2002AF518 /* PRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRequest.m; sourceTree = "<group>"; };
 		78BEC3E517306EA2002AF518 /* PResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PResponse.h; sourceTree = "<group>"; };
 		78BEC3E617306EA2002AF518 /* PResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PResponse.m; sourceTree = "<group>"; };
+		78FECE72174C0D6200D6162F /* Newsletter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newsletter.h; sourceTree = "<group>"; };
+		78FECE73174C0D6200D6162F /* Newsletter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Newsletter.m; sourceTree = "<group>"; };
+		78FECE75174C0E7600D6162F /* NewsletterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsletterTest.h; sourceTree = "<group>"; };
+		78FECE76174C0E7600D6162F /* NewsletterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsletterTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,11 +251,13 @@
 				7801C4C317320308002EEB33 /* GeoIPTest.h */,
 				7801C4C417320308002EEB33 /* GeoIPTest.m */,
 				7801C4C6173208E1002EEB33 /* LeaderboardsTest.h */,
+				7801C4CA1732C0EE002EEB33 /* PlayerLevelsTest.m */,
 				7801C4C7173208E1002EEB33 /* LeaderboardsTest.m */,
 				7801C4C91732C0EE002EEB33 /* PlayerLevelsTest.h */,
-				7801C4CA1732C0EE002EEB33 /* PlayerLevelsTest.m */,
 				78264D601747F8B0009003B1 /* AchievementsTest.h */,
 				78264D611747F8B0009003B1 /* AchievementsTest.m */,
+				78FECE75174C0E7600D6162F /* NewsletterTest.h */,
+				78FECE76174C0E7600D6162F /* NewsletterTest.m */,
 			);
 			path = "Playtomic iOS APITests";
 			sourceTree = "<group>";
@@ -320,6 +328,8 @@
 				78264D5B1747EC37009003B1 /* PlayerAward.m */,
 				78264D5D1747F037009003B1 /* Achievements.h */,
 				78264D5E1747F037009003B1 /* Achievements.m */,
+				78FECE72174C0D6200D6162F /* Newsletter.h */,
+				78FECE73174C0D6200D6162F /* Newsletter.m */,
 			);
 			path = Playtomic;
 			sourceTree = "<group>";
@@ -462,6 +472,7 @@
 				78264D591747EC2E009003B1 /* PlayerAchievement.m in Sources */,
 				78264D5C1747EC37009003B1 /* PlayerAward.m in Sources */,
 				78264D5F1747F037009003B1 /* Achievements.m in Sources */,
+				78FECE74174C0D6200D6162F /* Newsletter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +485,7 @@
 				7801C4C8173208E1002EEB33 /* LeaderboardsTest.m in Sources */,
 				7801C4CB1732C0EE002EEB33 /* PlayerLevelsTest.m in Sources */,
 				78264D621747F8B0009003B1 /* AchievementsTest.m in Sources */,
+				78FECE77174C0E7600D6162F /* NewsletterTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

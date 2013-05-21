@@ -7,6 +7,7 @@
 @property (strong) Leaderboards *leaderboards;
 @property (strong) PlayerLevels *playerlevels;
 @property (strong) Achievements *achievements;
+@property (strong) Newsletter *newsletter;
 @property (strong) NSString *apiURL;
 @property (strong) NSString *privateKey;
 @property (strong) NSString *publicKey;
@@ -18,6 +19,7 @@
 @synthesize leaderboards;
 @synthesize playerlevels;
 @synthesize achievements;
+@synthesize newsletter;
 @synthesize apiURL;
 @synthesize privateKey;
 @synthesize publicKey;
@@ -41,6 +43,7 @@ static Playtomic *instance = nil;
     instance.leaderboards = [[Leaderboards alloc] init];
     instance.playerlevels = [[PlayerLevels alloc] init];
     instance.achievements = [[Achievements alloc] init];
+    instance.newsletter = [[Newsletter alloc] init];
 }
 
 - (void)dealloc {
@@ -50,6 +53,7 @@ static Playtomic *instance = nil;
     self.leaderboards = nil;
     self.playerlevels = nil;
     self.achievements = nil;
+    self.newsletter = nil;
     self.apiURL = nil;
     self.privateKey = nil;
     self.publicKey = nil;
@@ -78,6 +82,11 @@ static Playtomic *instance = nil;
 + (Achievements*)Achievements
 {
     return instance.achievements;
+}
+
++ (Newsletter*)Newsletter
+{
+    return instance.newsletter;
 }
 
 + (NSString*)apiURL
