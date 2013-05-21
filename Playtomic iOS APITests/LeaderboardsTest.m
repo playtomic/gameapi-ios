@@ -288,7 +288,7 @@
 
 - (void)test6OwnScores
 {
-    NSString *section = @"leaderboards.friendsscores";
+    NSString *section = @"leaderboards.ownScores";
     __block int submitted = 0;
     
     NSMutableDictionary *fields = [[NSMutableDictionary alloc] init];

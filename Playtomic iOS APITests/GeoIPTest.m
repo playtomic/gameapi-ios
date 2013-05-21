@@ -1,6 +1,7 @@
 #import "GeoIPTest.h"
 #import "Playtomic.h"
 #import "PlayerCountry.h"
+#import "PResponse.h"
 
 @implementation GeoIPTest
 - (void) testLookup
