@@ -326,12 +326,13 @@
     
     PlayerScore *finalscore = [[PlayerScore alloc] init];
     finalscore.playername = @"test account";
-    finalscore.points = 3000;
+    finalscore.points = 2500;
     finalscore.fields = fields;
     finalscore.table = [NSString stringWithFormat:@"personal%d", rnd];
     finalscore.highest = true;
     finalscore.allowduplicates = true;
     finalscore.playerid = @"test@example.com";
+    finalscore.filters = fields;
     
     NSMutableDictionary *list = [[NSMutableDictionary alloc] init];
     [list setObject:[NSNumber numberWithInt:5] forKey:@"perpage"];
@@ -355,10 +356,11 @@
         STAssertTrue(score4.rank == 9, [NSString stringWithFormat:@"[%@] Score 4 ranked 9", section]);
         STAssertTrue(score5.rank == 10, [NSString stringWithFormat:@"[%@] Score 5 ranked 10", section]);
         STAssertTrue(score1.points == 4000, [NSString stringWithFormat:@"[%@] Score 1 points", section]);
-        STAssertTrue(score2.points == 3000, [NSString stringWithFormat:@"[%@] Score 2 points", section]);
-        STAssertTrue(score3.points == 3000, [NSString stringWithFormat:@"[%@] Score 3 points", section]);
+        STAssertTrue(score2.points == 3000, [NSString stringWithFormat:@"[%@] Score 3 points", section]);
+        STAssertTrue(score3.points == 2500, [NSString stringWithFormat:@"[%@] Score 2 points", section]);
         STAssertTrue(score4.points == 2000, [NSString stringWithFormat:@"[%@] Score 4 points", section]);
         STAssertTrue(score5.points == 1000, [NSString stringWithFormat:@"[%@] Score 5 points", section]);
+        STAssertTrue(score3.submitted, [NSString stringWithFormat:@"[%@] Score 3 was the submitted score", section]);
         done = YES;
     }];
     
